@@ -1,0 +1,25 @@
+# Ignore the target directory (Maven build output)
+target/
+
+# Ignore Maven wrapper files
+.mvn/
+mvnw
+mvnw.cmd
+
+# Ignore IDE specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.class
+
+# Ignore logs
+*.log
+
+# Ignore environment variable files
+.env
+
+# Ignore any other files or directories that are not needed for the build
+README.md
+HELP.md

@@ -1,50 +1,66 @@
 # Spring Boot Blog Application
 
-This is an ENTIRE application for Java Spring Boot using:
+This is a complete application built with Java Spring Boot, designed to demonstrate the capabilities of Spring Data JPA, Thymeleaf, and Spring Security. The application follows the Model-View-Controller (MVC) architecture and provides a platform for users to create, read, update, and delete blog posts.
+
+## Features
+
+- User authentication and authorization
+- Role-based access control (User and Admin roles)
+- CRUD operations for blog posts
+- H2 database for development and PostgreSQL for production
+- Responsive web interface using Thymeleaf
+- RESTful API for image handling
+
+## Technologies Used
+
+- Java 21
+- Spring Boot 3.1.5
 - Spring Data JPA
-- H2 Database
 - Thymeleaf
 - Spring Security
-- Model View Controller (MVC) architecture
-
-**I walk through how to build this yourself on YouTube**: https://youtu.be/7iWlCl35p9o
+- PostgreSQL
+- Maven
 
 ## Development Instructions
 
-- `git clone https://github.com/wazooinc/spring-boot-blog-application.git`
-- `cd spring-boot-blog-application`
-- open in favorite editor, or
-- `mvnw spring-boot:run`
-- open http://localhost:3000 and Blog away!
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/spring-boot-blog-application.git
+   cd spring-boot-blog-application
+   ```
 
-## Built-in Account and Constraints
+2. **Build the Application**:
+   You can build the application using Maven. Make sure you have Maven installed on your machine.
+   ```bash
+   mvn clean package
+   ```
 
-- Login as a User with `user.user@domain.com` and password `password`
-- Login as an Admin with `admin.admin@domain.com` and password `password`
-- An **Anonymous** account can only `READ` Posts
-- A **User** account can `CREATE, READ, UPDATE` Posts
-- An **Admin** account can `CREATE, READ, UPDATE, DELETE` Posts
+3. **Run the Application**:
+   You can run the application using the following command:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-## LICENSE
+4. **Access the Application**:
+   Open your web browser and navigate to `http://localhost:8080` to access the application.
 
-MIT License
+## Built-in Accounts and Constraints
 
-Copyright (c) 2022 Wazoo Enterprises Inc.
+- **User Account**:
+  - Email: `user.user@domain.com`
+  - Password: `password`
+  - Permissions: Can create, read, and update posts.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- **Admin Account**:
+  - Email: `admin.admin@domain.com`
+  - Password: `password`
+  - Permissions: Can create, read, update, and delete posts.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- **Anonymous Account**:
+  - Permissions: Can only read posts.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## Database Configuration
+
+The application uses PostgreSQL for production. You can configure the database connection in the `src/main/resources/application.properties` file. For development, the H2 database is enabled.
+
+### Example PostgreSQL Configuration:
